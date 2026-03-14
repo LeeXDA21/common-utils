@@ -31,6 +31,17 @@ fun getProperty(key: String): String =
 
 val githubUsername = getProperty("ghUsername")
 val githubAccessToken = getProperty("ghAccessToken")
+val githubRepositoryOwner =
+    rootProject.findProperty("ghRepositoryOwner")?.toString()
+        ?: System.getenv("GH_REPOSITORY_OWNER")
+        ?: githubUsername
+val githubRepositoryName =
+    rootProject.findProperty("ghRepositoryName")?.toString()
+        ?: System.getenv("GH_REPOSITORY_NAME")
+        ?: "common-utils"
+val githubRepositoryUrl = "https://github.com/$githubRepositoryOwner/$githubRepositoryName"
+val githubPackageUrl = "https://maven.pkg.github.com/$githubRepositoryOwner/$githubRepositoryName"
+val mavenGroup = "io.github.${githubRepositoryOwner.lowercase()}"
 
 allprojects {
     repositories {
@@ -76,7 +87,7 @@ subprojects {
             return@afterEvaluate
         }
         val artifact = "common-utils"
-        group = "io.github.lemkinator"
+        group = mavenGroup
         version = libs.versions.common.utils.get()
         println("Evaluated $group:$artifact:$version")
         project.extensions.configure<PublishingExtension>("publishing") {
@@ -89,7 +100,7 @@ subprojects {
                     pom {
                         name = artifact
                         description = "A collection of common utility functions and classes for my Android projects."
-                        url = "https://github.com/LeeXDA/common-utils"
+                        url = githubRepositoryUrl
                         developers {
                             developer {
                                 id = "LeeXDA"
@@ -100,13 +111,13 @@ subprojects {
                             }
                         }
                         scm {
-                            connection = "scm:git:git://github.com/LeeXDA/common-utils.git"
-                            developerConnection = "scm:git:ssh://github.com/LeeXDA/common-utils.git"
-                            url = "https://github.com/LeeXDA/common-utils"
+                            connection = "scm:git:git://github.com/$githubRepositoryOwner/$githubRepositoryName.git"
+                            developerConnection = "scm:git:ssh://github.com/$githubRepositoryOwner/$githubRepositoryName.git"
+                            url = githubRepositoryUrl
                         }
                         issueManagement{
                             system = "GitHub Issues"
-                            url = "https://github.com/LeeXDA/common-utils/issues"
+                            url = "$githubRepositoryUrl/issues"
                         }
                         licenses {
                             license {
@@ -121,7 +132,7 @@ subprojects {
             repositories {
                 maven {
                     name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/LeeXDA21/common-utils")
+                    url = uri(githubPackageUrl)
                     credentials {
                         username = githubUsername
                         password = githubAccessToken

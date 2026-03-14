@@ -4,12 +4,19 @@ on:
   push:
     branches: [ main ]
     paths: [ 'gradle/libs.versions.toml' ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   check-and-publish:
     env:
-      GH_USERNAME: ${{ secrets.GH_USERNAME }}
-      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      GH_USERNAME: ${{ github.actor }}
+      GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPOSITORY_OWNER: ${{ github.repository_owner }}
+      GH_REPOSITORY_NAME: ${{ github.event.repository.name }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -36,9 +43,17 @@ jobs:
       - name: Check if version changed
         id: check_version
         run: |
-          # Get the previous commit hash on main
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          if ! git rev-parse HEAD^ >/dev/null 2>&1; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           PREV_COMMIT=$(git rev-parse HEAD^)
-          # Extract the line from both versions, Use xargs to trim whitespace
           OLD_LINE=$(git show $PREV_COMMIT:gradle/libs.versions.toml | grep '^common-utils =' | xargs)
           NEW_LINE=$(grep '^common-utils =' gradle/libs.versions.toml | xargs)
           echo "Old: $OLD_LINE"
