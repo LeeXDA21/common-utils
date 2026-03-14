@@ -6,7 +6,6 @@
 [![](https://img.shields.io/github/contributors/LeeXDA21/common-utils)](https://github.com/LeeXDA21/common-utils/graphs/contributors)
 [![](https://img.shields.io/github/repo-size/LeeXDA21/common-utils)](https://github.com/LeeXDA21/common-utils)
 [![](https://sloc.xyz/github/LeeXDA21/common-utils)](https://github.com/LeeXDA21/common-utils)
-[![CodeFactor](https://www.codefactor.io/repository/github/LeeXDA21/common-utils/badge/main)](https://www.codefactor.io/repository/github/LeeXDA21/common-utils/overview/main)
 
 
 # Common utils
