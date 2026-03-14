@@ -4,12 +4,18 @@ on:
   pull_request:
   merge_group:
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GH_USERNAME: ${{ secrets.GH_USERNAME }}
-      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      GH_USERNAME: ${{ github.actor }}
+      GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPOSITORY_OWNER: ${{ github.repository_owner }}
+      GH_REPOSITORY_NAME: ${{ github.event.repository.name }}
 
     steps:
       - name: Checkout code
