@@ -3,7 +3,7 @@
     <string name="commonutils_leo" translatable="false">LeeXDA</string>
     <string name="commonutils_leo_job" translatable="false">Syndicate Founder</string>
     <string name="commonutils_my_website" translatable="false">https://www.futsyndicate.com</string>
-    <string name="commonutils_my_insta" translatable="false">https://www.instagram.com/lemkinator5/</string>
+    <string name="commonutils_my_insta" translatable="false">https://www.instagram.com/thefutsyndicate/</string>
     <string name="commonutils_my_github" translatable="false">https://github.com/LeeXDA</string>
     <string name="commonutils_playstore_developer_page_link" translatable="false">https://play.google.com/store/apps/dev?id=4961154860499174073</string>
     <string name="commonutils_playstore_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
@@ -30,7 +30,7 @@
     <!--Following strings should be overridden by the app-->
     <string name="commonutils_app_description" translatable="false">App description</string>
     <string name="commonutils_email" translatable="false">apps@leonard-lemke.com</string>
-    <string name="commonutils_privacy_website" translatable="false">https://www.leonard-lemke.com/apps</string>
+    <string name="commonutils_privacy_website" translatable="false">https://www.futsyndicate.com/privacy</string>
 
     <!--OOBE-->
     <string name="commonutils_oobe1_title">Beautiful design</string>.
