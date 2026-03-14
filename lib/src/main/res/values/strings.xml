@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
-    <string name="commonutils_leo" translatable="false">Leonard Lemke</string>
-    <string name="commonutils_leo_job" translatable="false">Softwaredeveloper</string>
-    <string name="commonutils_my_website" translatable="false">https://www.leonard-lemke.com</string>
+    <string name="commonutils_leo" translatable="false">LeeXDA</string>
+    <string name="commonutils_leo_job" translatable="false">Syndicate Founder</string>
+    <string name="commonutils_my_website" translatable="false">https://www.futsyndicate.com</string>
     <string name="commonutils_my_insta" translatable="false">https://www.instagram.com/lemkinator5/</string>
-    <string name="commonutils_my_github" translatable="false">https://github.com/Lemkinator</string>
+    <string name="commonutils_my_github" translatable="false">https://github.com/LeeXDA</string>
     <string name="commonutils_playstore_developer_page_link" translatable="false">https://play.google.com/store/apps/dev?id=4961154860499174073</string>
     <string name="commonutils_playstore_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
     <string name="commonutils_playstore_app_link" translatable="false">market://details?id=</string>

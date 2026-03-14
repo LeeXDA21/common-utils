@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "de.lemke.commonutils"
+    namespace = "com.lee.commonutils"
     compileSdk = 36
     defaultConfig {
         minSdk = 26

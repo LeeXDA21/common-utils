@@ -89,10 +89,10 @@ subprojects {
                     pom {
                         name = artifact
                         description = "A collection of common utility functions and classes for my Android projects."
-                        url = "https://github.com/Lemkinator/common-utils"
+                        url = "https://github.com/LeeXDA/common-utils"
                         developers {
                             developer {
-                                id = "Lemkinator"
+                                id = "LeeXDA"
                                 name = "Leonard Lemke"
                                 email = "leo@leonard-lemke.com"
                                 url = "https://www.leonard-lemke.com"
@@ -100,13 +100,13 @@ subprojects {
                             }
                         }
                         scm {
-                            connection = "scm:git:git://github.com/Lemkinator/common-utils.git"
-                            developerConnection = "scm:git:ssh://github.com/Lemkinator/common-utils.git"
-                            url = "https://github.com/Lemkinator/common-utils"
+                            connection = "scm:git:git://github.com/LeeXDA/common-utils.git"
+                            developerConnection = "scm:git:ssh://github.com/LeeXDA/common-utils.git"
+                            url = "https://github.com/LeeXDA/common-utils"
                         }
                         issueManagement{
                             system = "GitHub Issues"
-                            url = "https://github.com/Lemkinator/common-utils/issues"
+                            url = "https://github.com/LeeXDA/common-utils/issues"
                         }
                         licenses {
                             license {
@@ -121,7 +121,7 @@ subprojects {
             repositories {
                 maven {
                     name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/lemkinator/common-utils")
+                    url = uri("https://maven.pkg.github.com/LeeXDA21/common-utils")
                     credentials {
                         username = githubUsername
                         password = githubAccessToken
