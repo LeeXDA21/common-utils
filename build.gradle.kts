@@ -49,7 +49,7 @@ allprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
-        maven("https://maven.pkg.github.com/tribalfs/oneui-design") {
+        maven("https://maven.pkg.github.com/LeeXDA21/oneui-design") {
             credentials {
                 username = githubUsername
                 password = githubAccessToken
