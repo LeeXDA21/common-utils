@@ -1,7 +1,7 @@
 [versions]
 #lib version
 #noinspection UnusedVersionCatalogEntry
-common-utils = "0.0.2"
+common-utils = "0.0.3"
 
 aboutlibraries = "14.0.0-b02"
 activity-compose = "1.12.4"
@@ -12,7 +12,7 @@ gradle = "9.1.0"
 kotlin = "2.3.10"
 lottie = "6.7.1"
 material3 = "1.4.0"
-oneui-design = "0.8.23+oneui8"
+oneui-design = "0.9.72+oneui8"
 oneui-icons = "1.1.0"
 review-ktx = "2.0.2"
 
