@@ -23,7 +23,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3",
 app-update-ktx = { module = "com.google.android.play:app-update-ktx", version.ref = "app-update-ktx" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
-oneui-design = { module = "io.github.tribalfs:oneui-design", version.ref = "oneui-design" }
+oneui-design = { module = "io.github.leexda21:oneui-design", version.ref = "oneui-design" }
 oneui-icons = { module = "io.github.oneuiproject:icons", version.ref = "oneui-icons" }
 review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "review-ktx" }
 
