@@ -105,10 +105,10 @@ subprojects {
                         developers {
                             developer {
                                 id = "LeeXDA"
-                                name = "Leonard Lemke"
-                                email = "leo@leonard-lemke.com"
-                                url = "https://www.leonard-lemke.com"
-                                timezone = "Europe/Berlin"
+                                name = "LeeXDA"
+                                email = "LeeXDA@futsyndicate.com"
+                                url = "https://www.futsyndicate.com"
+                                timezone = "Europe/London"
                             }
                         }
                         scm {
